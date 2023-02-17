@@ -9,7 +9,8 @@ def is_anagram(first_string: str, second_string: str):
     sorted_second_string = "".join(sorted_second_string_list)
 
     if sorted_first_string.lower() == sorted_second_string.lower():
-        return (sorted_first_string.lower(), sorted_second_string.lower(), True)
+        return (sorted_first_string.lower(), sorted_second_string.lower(),
+                True)
     return (sorted_first_string.lower(), sorted_second_string.lower(), False)
 
 
@@ -18,7 +19,7 @@ def merge_sort(word: str):
         return word
 
     word_list = [letter for letter in word]
-    
+
     mid = len(word_list) // 2
 
     left = merge_sort(word_list[:mid])
@@ -32,7 +33,7 @@ def merge(left: list, right: list):
     while len(left) > 0 and len(right) > 0:
         if left[0].lower() < right[0].lower():
             result.append(left.pop(0))
-        else: 
+        else:
             result.append(right.pop(0))
     if len(left) == 0:
         result += right
