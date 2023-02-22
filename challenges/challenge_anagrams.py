@@ -13,7 +13,7 @@ def is_anagram(first_string: str, second_string: str):
                 True)
     return (sorted_first_string.lower(), sorted_second_string.lower(), False)
 
-
+# funções merge_sort e merge baseadas nas funções da aula 3 da seção 4
 def merge_sort(word: str):
     if len(word) <= 1 or not word:
         return word
